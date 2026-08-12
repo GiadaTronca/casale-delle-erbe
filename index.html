@@ -3,425 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Il Casale delle Erbe - erboristeria contadina, Bolzano Vicentino</title>
+<title>Il Casale delle Erbe — erboristeria contadina, Bolzano Vicentino</title>
 <meta name="description" content="Il Casale delle Erbe, erboristeria contadina a Bolzano Vicentino. Erbe officinali coltivate, raccolte ed essiccate da noi. Orto biologico, miele, fiori, serate ed eventi in campagna. Dal 2006.">
 <link rel="icon" href="favicon.png">
-<meta property="og:title" content="Il Casale delle Erbe - erboristeria contadina">
+<meta property="og:title" content="Il Casale delle Erbe — erboristeria contadina">
 <meta property="og:description" content="Le erbe delle nostre tisane crescono nel campo dietro casa. Bolzano Vicentino, dal 2006.">
 <meta property="og:image" content="immagini/sfondo-apertura.jpg">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Petit+Formal+Script&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --notte:    #2B2A22;
-  --notte-2:  #34322A;
-  --notte-3:  #232219;
-  --crema:    #ECE4D3;
-  --crema-op: rgba(236,228,211,.72);
-  --crema-fil:rgba(236,228,211,.26);
-  --ruggine:  #A9552E;
-  --oro:      #D9B25A;
-
-  --titolo:  "Newsreader", Georgia, serif;
-  --script:  "Petit Formal Script", cursive;
-  --sans:    "Public Sans", system-ui, sans-serif;
-
-  --margine: clamp(1.25rem, 5vw, 5.5rem);
-  --colonna: 84rem;
-}
-
-*,*::before,*::after{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{
-  margin:0; overflow-x:hidden;
-  background:var(--notte); color:var(--crema);
-  font-family:var(--sans); font-weight:300;
-  font-size:clamp(1rem,.95rem + .3vw,1.2rem);
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-}
-img{ display:block; width:100%; height:100%; object-fit:cover; }
-a{ color:inherit; }
-figure{ margin:0; }
-
-/* ── tipografia ─────────────────────────────────────────── */
-.display{
-  font-family:var(--titolo); font-weight:400;
-  font-size:clamp(2.4rem,1.4rem + 4.4vw,5.6rem);
-  line-height:1.02; letter-spacing:.005em; text-transform:uppercase;
-  margin:0;
-}
-.display--m{ font-size:clamp(2rem,1.3rem + 3vw,4rem); }
-.script{
-  font-family:var(--script); font-weight:400;
-  font-size:clamp(1.5rem,1.1rem + 1.6vw,2.4rem);
-  line-height:1.3; letter-spacing:.01em; text-transform:none;
-  color:var(--oro);
-}
-.occhiello{
-  font-family:var(--sans); font-weight:500;
-  font-size:clamp(.72rem,.68rem + .18vw,.88rem);
-  letter-spacing:.32em; text-transform:uppercase;
-  margin:0; color:var(--crema-op);
-}
-.fig{
-  font-family:var(--script); font-size:1.35rem; line-height:1;
-  color:var(--oro); margin:0 0 .3rem;
-}
-p{ margin:0 0 1.2em; }
-p:last-child{ margin-bottom:0; }
-.testo{
-  max-width:40ch; font-size:clamp(1rem,.96rem + .18vw,1.13rem);
-  line-height:1.8; color:rgba(236,228,211,.85);
-}
-.giustificato{ text-align:justify; text-justify:inter-word; hyphens:auto; }
-
-.legame{
-  display:inline-block; margin-top:2rem; padding:1rem 2.4rem;
-  border:1px solid var(--crema-fil); color:var(--crema); text-decoration:none;
-  font-family:var(--sans); font-weight:600;
-  font-size:.72rem; letter-spacing:.28em; text-transform:uppercase;
-  transition:background .3s ease, color .3s ease, border-color .3s ease;
-}
-.legame:hover{ background:var(--crema); color:var(--notte); border-color:var(--crema); }
-
-/* ── polaroid ───────────────────────────────────────────── */
-.polaroid{
-  background:var(--crema); padding:.6rem .6rem .7rem;
-  box-shadow:0 22px 50px rgba(15,14,10,.5);
-}
-.polaroid .ph{ overflow:hidden; background:var(--notte-2); }
-.polaroid figcaption{
-  padding:.7rem .2rem .1rem; text-align:center; color:var(--notte);
-  font-weight:600; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase;
-}
-.ph{ overflow:hidden; background:var(--notte-2); }
-/* etichetta dentro l'immagine (stile WEDDINGS / CAMPAIGNS) */
-.marcata{ position:relative; }
-.marcata .ph{ aspect-ratio:4/5; }
-.marcata .fig{ position:absolute; top:.9rem; left:1rem; z-index:2; text-shadow:0 1px 12px rgba(0,0,0,.6); margin:0; }
-.marcata .nome{
-  position:absolute; left:1rem; bottom:.9rem; z-index:2; margin:0;
-  font-family:var(--titolo); font-weight:400;
-  font-size:clamp(1.4rem,1.1rem + 1.1vw,2.1rem);
-  letter-spacing:.03em; text-transform:uppercase; color:var(--crema);
-  text-shadow:0 2px 20px rgba(0,0,0,.7);
-}
-.marcata::after{
-  content:""; position:absolute; inset:0; z-index:1;
-  background:linear-gradient(180deg,rgba(20,18,12,.35),transparent 35%,transparent 55%,rgba(20,18,12,.75));
-}
-
-/* ── impaginato ─────────────────────────────────────────── */
-section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
-.colonna{ max-width:var(--colonna); margin-inline:auto; }
-.intestazione{ max-width:44rem; }
-.intestazione .testo{ margin-top:1.75rem; }
-.tracciato-stacco{ margin-top:1.25rem; }
-
-/* ══ APERTURA ═══════════════════════════════════════════ */
-.apertura{
-  position:relative; min-height:100svh;
-  display:grid; place-items:center; text-align:center;
-  padding:clamp(6.5rem,15vh,9.5rem) var(--margine) clamp(3.5rem,9vh,5.5rem);
-}
-.apertura__sfondo{ position:absolute; inset:0; }
-.apertura__sfondo::after{
-  content:""; position:absolute; inset:0;
-  background:
-    radial-gradient(ellipse at 50% 42%, rgba(18,16,11,.12), rgba(18,16,11,.7) 78%),
-    linear-gradient(180deg, rgba(18,16,11,.6), rgba(18,16,11,.15) 40%, rgba(43,42,34,.96));
-}
-.testata{
-  position:absolute; top:0; left:0; right:0; z-index:3;
-  display:flex; align-items:center; justify-content:space-between;
-  gap:1rem; padding:clamp(1.15rem,2.5vw,1.9rem) var(--margine);
-}
-.testata__logo{ width:clamp(4rem,8vw,5.5rem); }
-.menu{ display:flex; gap:clamp(1.25rem,3vw,2.5rem); list-style:none; margin:0; padding:0; }
-.menu a{
-  text-decoration:none; font-weight:600;
-  font-size:.72rem; letter-spacing:.24em; text-transform:uppercase;
-  color:var(--crema-op); border-bottom:1px solid transparent; padding-bottom:.25rem;
-}
-.menu a:hover{ color:var(--crema); border-bottom-color:var(--crema); }
-
-.apertura__centro{ position:relative; z-index:2; max-width:60rem; }
-.ornamento{ width:clamp(3rem,6vw,4.2rem); margin:0 auto 1.75rem; opacity:.85; }
-.apertura .display{
-  font-size:clamp(2.6rem,1rem + 8vw,7rem);
-  letter-spacing:.04em; margin:1.5rem 0 .75rem;
-  text-shadow:0 2px 44px rgba(15,14,10,.65);
-}
-.apertura .script{ color:rgba(236,228,211,.94); }
-.apertura__giu{
-  position:absolute; bottom:clamp(1.75rem,4vh,2.75rem); left:50%; transform:translateX(-50%);
-  z-index:2; text-decoration:none;
-  font-weight:600; font-size:.68rem; letter-spacing:.3em; text-transform:uppercase;
-  color:rgba(236,228,211,.6);
-}
-
-/* ══ PRESENTAZIONE ══════════════════════════════════════ */
-.presentazione{ background:var(--notte-2); }
-.due-colonne{
-  display:grid; gap:clamp(2.5rem,6vw,5.5rem); grid-template-columns:1fr;
-}
-@media (min-width:64rem){ .due-colonne{ grid-template-columns:.82fr 1.18fr; align-items:center; } }
-.presentazione .display{ margin-bottom:1.5rem; }
-.presentazione .script{ display:block; margin:1.5rem 0; max-width:26ch; }
-
-.collage{
-  display:grid; grid-template-columns:repeat(6,1fr);
-  gap:clamp(.9rem,2vw,1.6rem); align-items:start;
-}
-.collage .c1{ grid-column:1/4; margin-top:clamp(1.5rem,5vw,3.5rem); transform:rotate(-3deg); }
-.collage .c2{ grid-column:4/7; transform:rotate(2.2deg); }
-.collage .c3{ grid-column:1/3; transform:rotate(1.5deg); }
-.collage .c4{ grid-column:3/5; align-self:center; }
-.collage .c5{ grid-column:5/7; margin-top:clamp(-2.5rem,-3vw,-.5rem); transform:rotate(-1.5deg); }
-.collage .c1 .ph{ aspect-ratio:4/5; }
-.collage .c2 .ph{ aspect-ratio:3/4; }
-.collage .c3 .ph{ aspect-ratio:1; }
-.collage .c5 .ph{ aspect-ratio:4/5; }
-.collage__fiore{ text-align:center; padding:.5rem 0; align-self:center; }
-.collage__fiore img{ width:min(100%,11rem); margin:0 auto .6rem; filter:drop-shadow(0 14px 24px rgba(15,14,10,.35)); }
-.collage__fiore span{ display:block; font-family:var(--script); font-size:1.5rem; line-height:1.15; color:var(--crema-op); }
-
-/* ══ STRISCIA ═══════════════════════════════════════════ */
-.striscia{ border-top:1px solid var(--crema-fil); border-bottom:1px solid var(--crema-fil); padding-block:clamp(2.5rem,6vh,3.5rem); }
-.striscia__interno{ display:grid; gap:clamp(1.5rem,4vw,2.5rem); grid-template-columns:1fr; align-items:center; }
-@media (min-width:56rem){ .striscia__interno{ grid-template-columns:11rem 1fr; } }
-.voci{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:clamp(1.25rem,3vw,2rem); list-style:none; margin:0; padding:0; }
-.voci li{
-  font-family:var(--titolo); font-weight:400;
-  font-size:clamp(1.05rem,.9rem + .6vw,1.5rem);
-  letter-spacing:.06em; text-transform:uppercase;
-}
-
-/* ══ SCENA (foto piena) ═════════════════════════════════ */
-.scena{ position:relative; padding-block:clamp(5.5rem,15vh,11rem); }
-.scena__sfondo{ position:absolute; inset:0; }
-.scena__sfondo::after{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg,rgba(22,20,14,.76),rgba(22,20,14,.5) 50%,rgba(22,20,14,.84));
-}
-.scena__interno{ position:relative; z-index:2; }
-
-/* griglia progetti in stile WEDDINGS/CAMPAIGNS */
-.progetti{
-  display:grid; gap:clamp(1.5rem,4vw,2.75rem);
-  grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
-  margin-top:clamp(2.75rem,6vh,4rem);
-}
-.progetti a{ text-decoration:none; display:block; }
-.progetti a:nth-child(2){ margin-top:clamp(1.25rem,4vw,3rem); }
-.progetti a:hover .ph img{ transform:scale(1.04); }
-.progetti .ph img{ transition:transform 1.1s cubic-bezier(.2,.7,.3,1); }
-
-/* ══ SEZIONE RUGGINE ════════════════════════════════════ */
-.ruggine{ background:var(--ruggine); color:var(--crema); position:relative; overflow:hidden; padding-bottom:clamp(9rem,22vh,16rem); }
-.ruggine__griglia{ display:grid; gap:clamp(2.5rem,6vw,5rem); grid-template-columns:1fr; position:relative; z-index:2; }
-@media (min-width:64rem){ .ruggine__griglia{ grid-template-columns:1.15fr .85fr; align-items:center; } }
-.ruggine .display{ letter-spacing:.02em; }
-.ruggine .script{ display:block; margin:1.75rem 0 1.5rem; color:rgba(236,228,211,.96); max-width:26ch; }
-.ruggine .testo{ color:rgba(236,228,211,.9); max-width:34ch; }
-/* due colonnine di testo come nella reference */
-.due-testi{ display:grid; gap:1.5rem 2.5rem; grid-template-columns:1fr; }
-@media (min-width:40rem){ .due-testi{ grid-template-columns:1fr 1fr; } }
-.due-testi .testo{ font-size:.98rem; line-height:1.7; }
-.firma{ font-family:var(--script); font-size:2.6rem; line-height:1; margin-top:1.75rem; color:rgba(236,228,211,.96); }
-.ruggine__foto{ position:relative; }
-.ruggine__foto .grande{ width:84%; margin-left:auto; transform:rotate(1.8deg); }
-.ruggine__foto .grande .ph{ aspect-ratio:4/5; }
-.ruggine__foto .piccola{ position:absolute; left:0; bottom:-1.5rem; width:46%; transform:rotate(-3deg); }
-.ruggine__foto .piccola .ph{ aspect-ratio:1; }
-.insegna{
-  position:absolute; left:50%; bottom:0; transform:translate(-50%,25%);
-  z-index:0; pointer-events:none; white-space:nowrap;
-  font-family:var(--titolo); font-weight:400;
-  font-size:clamp(3.5rem,13vw,12rem); line-height:.8; letter-spacing:.02em;
-  text-transform:uppercase; color:transparent;
-  -webkit-text-stroke:1px rgba(236,228,211,.26);
-}
-
-/* ══ ERBARIO ════════════════════════════════════════════ */
-.erbario{ padding-inline:0; }
-.erbario__testa{ padding-inline:var(--margine); max-width:var(--colonna); margin-inline:auto; }
-.pista{
-  display:flex; gap:clamp(1.25rem,2.5vw,2rem); align-items:flex-start;
-  margin-top:clamp(2.75rem,6vh,4rem); padding:.5rem var(--margine) 1.5rem;
-  overflow-x:auto; scroll-snap-type:x mandatory;
-  scrollbar-width:thin; scrollbar-color:var(--crema-fil) transparent;
-}
-.scheda-erba{ flex:0 0 clamp(12.5rem,32vw,16rem); scroll-snap-align:center; }
-.scheda-erba:nth-child(even){ margin-top:clamp(1.25rem,3vw,2.5rem); }
-.scheda-erba .ph{ aspect-ratio:3/4; }
-.scheda-erba .dati{ padding:.75rem .25rem .1rem; text-align:center; color:var(--notte); }
-.scheda-erba .dati strong{
-  display:block; font-family:var(--titolo); font-weight:500;
-  font-size:1.1rem; letter-spacing:.03em; text-transform:uppercase;
-}
-.scheda-erba .dati em{ font-family:var(--titolo); font-style:italic; font-weight:400; font-size:1rem; color:rgba(43,42,34,.72); }
-.trascina{ text-align:center; margin-top:.5rem; font-size:.65rem; letter-spacing:.3em; text-transform:uppercase; color:var(--crema-op); }
-
-/* ══ ALMANACCO ══════════════════════════════════════════ */
-.almanacco{ margin-top:clamp(2.75rem,6vh,4rem); border-top:1px solid var(--crema-fil); }
-.riga{ display:grid; grid-template-columns:1fr; gap:.5rem 2rem; padding:clamp(1.6rem,3.5vw,2.4rem) 0; border-bottom:1px solid var(--crema-fil); align-items:baseline; }
-@media (min-width:44rem){ .riga{ grid-template-columns:4.5rem 12rem 1fr; } }
-.riga .num{ font-family:var(--script); font-size:2.2rem; line-height:1; color:var(--oro); }
-.riga .quando{ font-weight:600; font-size:.72rem; letter-spacing:.24em; text-transform:uppercase; color:var(--crema-op); }
-.riga h3{
-  font-family:var(--titolo); font-weight:500; margin:0 0 .5rem;
-  font-size:clamp(1.3rem,1.1rem + .6vw,1.7rem); letter-spacing:.02em; text-transform:uppercase;
-}
-.riga p{ font-size:1rem; line-height:1.75; color:rgba(236,228,211,.82); max-width:60ch; }
-
-/* ══ ISCRIZIONE ═════════════════════════════════════════ */
-.iscrizione{ background:var(--notte-3); text-align:center; }
-.modulo{ max-width:38rem; margin:clamp(2.25rem,5vh,3rem) auto 0; text-align:left; }
-.campi{ display:grid; gap:1.5rem; grid-template-columns:1fr; }
-@media (min-width:34rem){ .campi{ grid-template-columns:1fr 1fr; } }
-.campo--largo{ grid-column:1/-1; }
-.campo label{ display:block; margin-bottom:.55rem; font-weight:600; font-size:.68rem; letter-spacing:.26em; text-transform:uppercase; color:var(--crema-op); }
-.campo input{
-  width:100%; padding:.75rem 0; border:0; border-bottom:1px solid var(--crema-fil);
-  background:transparent; color:var(--crema);
-  font-family:var(--sans); font-weight:300; font-size:1.05rem; border-radius:0;
-}
-.campo input::placeholder{ color:rgba(236,228,211,.35); }
-.campo input:focus{ outline:none; border-bottom-color:var(--oro); }
-.consenso{ display:flex; gap:.8rem; align-items:flex-start; margin:1.9rem 0 1.6rem; font-size:.9rem; line-height:1.65; color:rgba(236,228,211,.7); }
-.consenso input{ margin-top:.35rem; accent-color:var(--oro); flex:none; width:1.05rem; height:1.05rem; }
-.esito{ margin-top:1rem; font-size:.92rem; min-height:1.4em; text-align:center; }
-.esito.ok{ color:var(--oro); }
-.esito.ko{ color:#E6A98B; }
-.oppure{ margin-top:2.75rem; padding-top:2.25rem; border-top:1px solid var(--crema-fil); font-size:.92rem; color:var(--crema-op); }
-.wa{
-  display:inline-flex; align-items:center; gap:.6rem; margin-top:1.1rem;
-  padding:.9rem 1.9rem; border:1px solid var(--crema-fil); color:var(--crema);
-  text-decoration:none; font-weight:600; font-size:.7rem; letter-spacing:.26em; text-transform:uppercase;
-  transition:background .3s ease, color .3s ease;
-}
-.wa:hover{ background:var(--crema); color:var(--notte); }
-.wa svg{ width:1.2em; height:1.2em; flex:none; }
-
-/* ══ BOTTEGA ════════════════════════════════════════════ */
-.orari{ margin:2rem 0 0; border-top:1px solid var(--crema-fil); max-width:28rem; }
-.orari div{ display:flex; justify-content:space-between; gap:1rem; padding:.75rem 0; border-bottom:1px solid var(--crema-fil); font-size:.95rem; }
-.orari dt{ font-weight:600; font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:var(--crema-op); }
-.orari dd{ margin:0; font-variant-numeric:tabular-nums; }
-.recapiti{ margin-top:2rem; font-style:normal; font-size:.98rem; line-height:2; }
-.recapiti a{ text-decoration:none; border-bottom:1px solid var(--crema-fil); }
-.recapiti a:hover{ border-bottom-color:var(--crema); }
-
-/* ══ PIEDE ══════════════════════════════════════════════ */
-.piede{ background:var(--notte-3); border-top:1px solid var(--crema-fil); padding:clamp(3.5rem,9vh,5rem) var(--margine) clamp(2.25rem,5vh,3rem); text-align:center; }
-.piede__sigillo{ width:clamp(5.5rem,12vw,7rem); margin:0 auto 2rem; }
-.social{ display:flex; justify-content:center; flex-wrap:wrap; gap:1.5rem 2.75rem; list-style:none; margin:0 0 2rem; padding:0; }
-.social a{ text-decoration:none; font-weight:600; font-size:.7rem; letter-spacing:.26em; text-transform:uppercase; border-bottom:1px solid transparent; padding-bottom:.25rem; }
-.social a:hover{ border-bottom-color:var(--crema); }
-.piede small{ display:block; font-size:.72rem; letter-spacing:.1em; color:var(--crema-op); line-height:2; }
-
-/* ── sticker (ritagli su trasparenza, senza cornice) ────── */
-.sticker{
-  position:absolute; z-index:3; pointer-events:none;
-  filter:drop-shadow(0 18px 30px rgba(15,14,10,.4));
-}
-.sticker img{ width:100%; height:auto; }
-.sez-rel{ position:relative; }
-
-/* ── comparsa ───────────────────────────────────────────── */
-.appare{ opacity:0; transform:translateY(1.25rem); }
-.appare.visibile{ opacity:1; transform:none; transition:opacity 1.1s ease, transform 1.1s cubic-bezier(.2,.7,.3,1); }
-:focus-visible{ outline:2px solid var(--oro); outline-offset:3px; }
-
-/* ═══ MOBILE ════════════════════════════════════════════ */
-@media (max-width:60rem){
-  .insegna{ font-size:clamp(3.5rem,15vw,9rem); }
-}
-@media (max-width:48rem){
-  /* le sezioni con sticker non devono sforare (tranne erbario, che scrolla di lato) */
-  .sez-rel:not(.erbario){ overflow:hidden; }
-  /* sticker: piu piccoli e tenuti dentro il bordo su telefono */
-  .sticker{ opacity:.96; }
-  .presentazione .sticker{ width:6rem !important; right:0; bottom:-1.5rem; }
-  .erbario .sticker{ display:none; }
-  #eventi .sticker{ width:5rem !important; right:0; top:0; }
-  #bottega .sticker{ width:6rem !important; left:0; bottom:-1.5rem; }
-  .insegna{ max-width:100vw; overflow:hidden; }
-  section{ padding:clamp(3.5rem,8vh,5rem) var(--margine); }
-  .testata{ flex-direction:column; gap:.9rem; padding:clamp(1.15rem,4vw,1.6rem) var(--margine) 0; }
-  .menu{ gap:1.5rem; }
-  .apertura{ padding-top:clamp(7.5rem,20vh,9.5rem); }
-  .testo{ max-width:100%; }
-  .intestazione{ max-width:100%; }
-  /* su mobile il testo giustificato può fare buchi: torno a bandiera */
-  .giustificato{ text-align:left; hyphens:none; }
-  .collage{ grid-template-columns:repeat(2,1fr); gap:1rem; }
-  .collage .c1,.collage .c2,.collage .c3,.collage .c4,.collage .c5{ grid-column:auto; margin-top:0; transform:none; }
-  .collage .c4{ grid-column:1/-1; order:-1; }
-  .collage__fiore img{ width:6rem; }
-  .ruggine{ padding-bottom:clamp(5.5rem,15vh,7.5rem); }
-  .ruggine__foto .grande{ width:100%; transform:none; margin:0; }
-  .ruggine__foto .piccola{ position:static; width:62%; margin:-2rem 0 0 auto; transform:none; }
-  .due-testi{ grid-template-columns:1fr; }
-  .progetti a:nth-child(2){ margin-top:0; }
-  .riga{ grid-template-columns:2.75rem 1fr; gap:.3rem 1rem; }
-  .riga .quando{ align-self:center; }
-  .riga > div{ grid-column:1/-1; margin-top:.5rem; }
-  .voci{ justify-content:flex-start; gap:.7rem 1.9rem; }
-  .campi{ grid-template-columns:1fr; }
-  .insegna{ font-size:clamp(3rem,15vw,5.5rem); }
-}
-@media (max-width:24rem){
-  .menu{ gap:1.1rem; font-size:.65rem; }
-  .collage{ grid-template-columns:1fr; }
-}
-@media (prefers-reduced-motion:reduce){
-  html{ scroll-behavior:auto; }
-  .appare{ opacity:1; transform:none; transition:none; }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/stile.css">
+<script>document.documentElement.className += ' js-anim';</script>
 </head>
 <body>
 
-<!-- ══ APERTURA ══════════════════════════════════════════ -->
-<header class="apertura">
-  <div class="apertura__sfondo"><img src="immagini/sfondo-apertura.jpg" alt="Il campo di erbe e fiori del casale"></div>
+<!-- ══ BARRA ANNUNCIO ════════════════════════════════════ -->
+<div class="annuncio">
+  <strong>Bottega aperta</strong> · Mar–Sab · Raccolta fiori nel campo da luglio
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<header class="hero">
+  <div class="hero__sfondo"><img src="immagini/sfondo-apertura.jpg" alt="Il campo di erbe e fiori del casale al tramonto"></div>
+
   <div class="testata">
-    <a href="#" class="testata__logo"><img src="immagini/marchio-crema.png" alt="Il Casale delle Erbe · Vicenza"></a>
-    <ul class="menu">
+    <a href="#" class="testata__logo" aria-label="Il Casale delle Erbe · Vicenza"><img src="immagini/marchio-crema.png" alt=""></a>
+
+    <button class="apri-menu" aria-label="Apri il menu" aria-controls="menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="menu" id="menu">
+      <li><button class="chiudi-menu" aria-label="Chiudi il menu">×</button></li>
       <li><a href="#erbario">Erbario</a></li>
       <li><a href="#eventi">Eventi</a></li>
       <li><a href="#bottega">Bottega</a></li>
+      <li><a href="#iscrizione">Contatti</a></li>
     </ul>
   </div>
-  <div class="apertura__centro">
-    <img class="ornamento" src="immagini/fiore-crema.png" alt="">
-    <p class="occhiello">Azienda agricola biologica · Bolzano Vicentino · dal 2006</p>
-    <h1 class="display">Il Casale<br>delle Erbe</h1>
-    <p class="script">erboristeria contadina</p>
+
+  <div class="hero__centro">
+    <h1 class="display">Il Casale<br>delle <em>Erbe</em></h1>
+    <p class="mano">erboristeria contadina</p>
+    <p class="hero__nota">Bolzano Vicentino · dal 2006</p>
   </div>
-  <a class="apertura__giu" href="#presentazione">Scorri</a>
+
+  <a class="hero__giu" href="#manifesto">Scorri</a>
 </header>
 
-<!-- ══ PRESENTAZIONE ═════════════════════════════════════ -->
-<section class="presentazione" id="presentazione">
+<!-- ══ MANIFESTO ═════════════════════════════════════════ -->
+<section class="manifesto" id="manifesto">
   <div class="colonna due-colonne">
-    <div class="appare">
-      <h2 class="display display--m">Erbe e fiori<br>per chi sa<br>aspettare</h2>
-      <p class="occhiello tracciato-stacco">Bolzano Vicentino · Vicenza</p>
-      <p class="script">Semino, colgo, essicco, miscelo.</p>
-      <p class="testo giustificato">Quattro ettari di terra, biologici da vent'anni. Ci cresce quello che finisce nelle nostre tisane: calendula, malva, lavanda, iperico, melissa. E accanto, l'orto di stagione, le api e il campo dei fiori da taglio.</p>
-      <p class="testo giustificato" style="margin-top:1.2em">Non è un'erboristeria che compra e rivende. Seminiamo, raccogliamo a mano nel momento giusto della giornata, essicchiamo lentamente sui telai e misceliamo una ricetta alla volta. Poi apriamo la bottega e ve la diamo in mano, raccontandovi da quale filare arriva.</p>
+    <div class="reveal">
+      <h2 class="display display--m">Erbe e fiori<br>per chi sa<br><em>aspettare</em></h2>
+      <p class="mano">Semino, colgo, essicco, miscelo.</p>
+      <p class="testo">Quattro ettari di terra, biologici da vent'anni. Ci cresce quello che finisce nelle nostre tisane: calendula, malva, lavanda, iperico, melissa. E accanto, l'orto di stagione, le api e il campo dei fiori da taglio.</p>
+      <p class="testo" style="margin-top:1.2em">Non è un'erboristeria che compra e rivende. Seminiamo, raccogliamo a mano nel momento giusto della giornata, essicchiamo lentamente sui telai e misceliamo una ricetta alla volta. Poi apriamo la bottega e ve la diamo in mano, raccontandovi da quale filare arriva.</p>
       <a class="legame" href="#erbario">Guarda l'erbario</a>
     </div>
 
-    <div class="collage appare">
+    <div class="collage reveal">
+      <span class="verticale">dal campo dietro casa</span>
       <figure class="polaroid c1"><div class="ph"><img src="immagini/raccolta-calendula.jpg" alt="Mano che coglie la calendula" loading="lazy"></div></figure>
       <figure class="polaroid c2"><div class="ph"><img src="immagini/essiccatoio.jpg" alt="Calendula stesa sui telai dell'essiccatoio" loading="lazy"></div></figure>
       <figure class="polaroid c3"><div class="ph"><img src="immagini/sacchetto.jpg" alt="Fiori essiccati in un sacchetto di carta" loading="lazy"></div></figure>
@@ -436,8 +80,8 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 
 <!-- ══ STRISCIA ══════════════════════════════════════════ -->
 <section class="striscia">
-  <div class="colonna striscia__interno appare">
-    <p class="occhiello">Quello che<br>facciamo</p>
+  <div class="colonna striscia__interno reveal">
+    <p class="occhiello occhiello--nudo">Quello che facciamo</p>
     <ul class="voci">
       <li>Tisane</li>
       <li>Erbe sfuse</li>
@@ -453,12 +97,12 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 <section class="scena">
   <div class="scena__sfondo"><img src="immagini/sfondo-eventi.jpg" alt="La serra e i campi del casale" loading="lazy"></div>
   <div class="scena__interno colonna">
-    <div class="intestazione appare">
-      <p class="occhiello">Nel campo · da giugno a ottobre</p>
-      <h2 class="display display--m tracciato-stacco">Cose che succedono<br>qui in campagna</h2>
+    <div class="intestazione reveal">
+      <h2 class="display display--m">Cose che succedono<br>qui in <em>campagna</em></h2>
+      <p class="nota">Nel campo, da giugno a ottobre.</p>
     </div>
 
-    <div class="progetti appare">
+    <div class="progetti reveal">
       <a class="polaroid marcata" href="#eventi">
         <div class="ph"><img src="immagini/galleria-4.jpg" alt="Forbici tra i fiordalisi durante la raccolta" loading="lazy"></div>
         <p class="nome">Raccolta fiori</p>
@@ -471,21 +115,21 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
   </div>
 </section>
 
-<!-- ══ SEZIONE RUGGINE ═══════════════════════════════════ -->
-<section class="ruggine">
-  <div class="colonna ruggine__griglia">
-    <div class="appare">
-      <h2 class="display">Le mani che<br>raccolgono e la<br>testa che miscela.</h2>
-      <p class="script">E poi ve lo racconto, guardandovi negli occhi.</p>
+<!-- ══ STORIA ════════════════════════════════════════════ -->
+<section class="storia">
+  <div class="colonna storia__griglia">
+    <div class="reveal">
+      <h2 class="display">Le mani che<br>raccolgono e la<br>testa che <em>miscela</em>.</h2>
+      <p class="mano">E poi ve lo racconto, guardandovi negli occhi.</p>
       <div class="due-testi">
-        <p class="testo giustificato">Massimo e Maria hanno tenuto le api per più di vent'anni. Nel 2006 sono diventata erborista e li ho convinti a provare una cosa nuova: convertire tutto al biologico e cominciare a seminare officinali. Da lì sono arrivate le tisane, poi la bottega, poi l'orto e il campo dei fiori.</p>
-        <p class="testo giustificato">Lavoriamo anche con chi ha bisogno di un posto dove ricominciare: è la parte di cui vado più fiera, e la facciamo sottovoce. Siamo ancora noi tre, sulla stessa terra, con lo stesso trattore vecchio.</p>
+        <p class="testo">Massimo e Maria hanno tenuto le api per più di vent'anni. Nel 2006 sono diventata erborista e li ho convinti a provare una cosa nuova: convertire tutto al biologico e cominciare a seminare officinali. Da lì sono arrivate le tisane, poi la bottega, poi l'orto e il campo dei fiori.</p>
+        <p class="testo">Lavoriamo anche con chi ha bisogno di un posto dove ricominciare: è la parte di cui vado più fiera, e la facciamo sottovoce. Siamo ancora noi tre, sulla stessa terra, con lo stesso trattore vecchio.</p>
       </div>
       <p class="firma">Emanuela</p>
       <a class="legame" href="#iscrizione">Restiamo in contatto</a>
     </div>
 
-    <div class="ruggine__foto appare">
+    <div class="storia__foto reveal">
       <figure class="polaroid grande"><div class="ph"><img src="immagini/emanuela.jpg" alt="Emanuela nel frutteto" loading="lazy"></div></figure>
       <figure class="polaroid piccola"><div class="ph"><img src="immagini/risate.jpg" alt="Maria ed Emanuela ridono in laboratorio" loading="lazy"></div></figure>
     </div>
@@ -495,44 +139,43 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 
 <!-- ══ ERBARIO ═══════════════════════════════════════════ -->
 <section class="erbario" id="erbario">
-  <div class="erbario__testa appare">
-    <p class="occhiello">L'erbario · sei voci</p>
-    <h2 class="display display--m tracciato-stacco">Quello che c'è<br>nei nostri campi</h2>
+  <div class="erbario__testa reveal">
+    <h2 class="display display--m">Quello che c'è<br>nei nostri <em>campi</em></h2>
+    <p class="nota">Sei erbe, tutte coltivate e raccolte qui a Bolzano Vicentino.</p>
   </div>
-  <div class="pista appare">
-    <figure class="polaroid scheda-erba"><div class="ph"><img src="immagini/erbario-calendula.jpg" alt="Calendula in fiore" loading="lazy"></div><figcaption class="dati"><strong>Calendula</strong><em>Calendula officinalis</em></figcaption></figure>
-    <figure class="polaroid scheda-erba"><div class="ph"><img src="immagini/erbario-lavanda.jpg" alt="Mano che raccoglie la lavanda" loading="lazy"></div><figcaption class="dati"><strong>Lavanda</strong><em>Lavandula angustifolia</em></figcaption></figure>
-    <figure class="polaroid scheda-erba"><div class="ph"><img src="immagini/erbario-iperico.jpg" alt="Iperico appena colto" loading="lazy"></div><figcaption class="dati"><strong>Iperico</strong><em>Hypericum perforatum</em></figcaption></figure>
-    <figure class="polaroid scheda-erba"><div class="ph"><img src="immagini/erbario-monarda.jpg" alt="Mazzo di monarda" loading="lazy"></div><figcaption class="dati"><strong>Monarda</strong><em>Monarda didyma</em></figcaption></figure>
-    <figure class="polaroid scheda-erba"><div class="ph"><img src="immagini/erbario-fiordaliso.jpg" alt="Fiordalisi e ammi" loading="lazy"></div><figcaption class="dati"><strong>Fiordaliso</strong><em>Centaurea cyanus</em></figcaption></figure>
-    <figure class="polaroid scheda-erba"><div class="ph"><img src="immagini/erbario-malva.jpg" alt="Fiori di malva" loading="lazy"></div><figcaption class="dati"><strong>Malva</strong><em>Malva sylvestris</em></figcaption></figure>
+  <div class="pista reveal">
+    <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. I</span><div class="ph"><img src="immagini/erbario-calendula.jpg" alt="Calendula in fiore" loading="lazy"></div><figcaption class="dati"><strong>Calendula</strong><em>Calendula officinalis</em></figcaption></figure>
+    <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. II</span><div class="ph"><img src="immagini/erbario-lavanda.jpg" alt="Mano che raccoglie la lavanda" loading="lazy"></div><figcaption class="dati"><strong>Lavanda</strong><em>Lavandula angustifolia</em></figcaption></figure>
+    <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. III</span><div class="ph"><img src="immagini/erbario-iperico.jpg" alt="Iperico appena colto" loading="lazy"></div><figcaption class="dati"><strong>Iperico</strong><em>Hypericum perforatum</em></figcaption></figure>
+    <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. IV</span><div class="ph"><img src="immagini/erbario-monarda.jpg" alt="Mazzo di monarda" loading="lazy"></div><figcaption class="dati"><strong>Monarda</strong><em>Monarda didyma</em></figcaption></figure>
+    <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. V</span><div class="ph"><img src="immagini/erbario-fiordaliso.jpg" alt="Fiordalisi e ammi" loading="lazy"></div><figcaption class="dati"><strong>Fiordaliso</strong><em>Centaurea cyanus</em></figcaption></figure>
+    <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. VI</span><div class="ph"><img src="immagini/erbario-malva.jpg" alt="Fiori di malva" loading="lazy"></div><figcaption class="dati"><strong>Malva</strong><em>Malva sylvestris</em></figcaption></figure>
   </div>
-  <p class="trascina appare">Trascina di lato →</p>
+  <p class="trascina reveal">Trascina di lato →</p>
 </section>
 
 <!-- ══ ALMANACCO ═════════════════════════════════════════ -->
 <section class="colonna" id="eventi">
-  <div class="intestazione appare">
-    <p class="occhiello">L'almanacco</p>
-    <h2 class="display display--m tracciato-stacco">Non è un calendario fisso:<br>dipende dalle fioriture</h2>
-    <p class="testo tracciato-stacco">Annunciamo ogni cosa con qualche settimana di anticipo a chi ci ha lasciato un recapito.</p>
+  <div class="intestazione reveal">
+    <h2 class="display display--m">Non un calendario fisso:<br>dipende dalle <em>fioriture</em></h2>
+    <p class="testo stacco">Annunciamo ogni cosa con qualche settimana di anticipo a chi ci ha lasciato un recapito.</p>
   </div>
 
-  <div class="almanacco appare">
+  <div class="almanacco reveal">
     <div class="riga">
       <span class="num">i</span>
       <p class="quando">24 giugno</p>
       <div>
         <h3>La notte di San Giovanni</h3>
-        <p class="giustificato">La sera prima si raccolgono le erbe e si mettono in acqua sotto le stelle. La mattina dopo ci si lava con la rugiada. Si sta insieme, si spiega cosa va nel mazzo e perché.</p>
+        <p>La sera prima si raccolgono le erbe e si mettono in acqua sotto le stelle. La mattina dopo ci si lava con la rugiada. Si sta insieme, si spiega cosa va nel mazzo e perché.</p>
       </div>
     </div>
     <div class="riga">
       <span class="num">ii</span>
-      <p class="quando">Luglio - Settembre</p>
+      <p class="quando">Luglio – Settembre</p>
       <div>
         <h3>Raccolta fiori nel campo</h3>
-        <p class="giustificato">Si entra tra i filari con le forbici e il secchio e ci si fa il mazzo da sé: dalie, zinnie, girasoli, ammi. Si paga a stelo.</p>
+        <p>Si entra tra i filari con le forbici e il secchio e ci si fa il mazzo da sé: dalie, zinnie, girasoli, ammi. Si paga a stelo.</p>
       </div>
     </div>
     <div class="riga">
@@ -540,7 +183,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
       <p class="quando">Estate</p>
       <div>
         <h3>Serate in mezzo alle erbe</h3>
-        <p class="giustificato">Cena semplice all'aperto, giro nei campi al tramonto e assaggio di tisane fredde. Posti pochi, si prenota.</p>
+        <p>Cena semplice all'aperto, giro nei campi al tramonto e assaggio di tisane fredde. Posti pochi, si prenota.</p>
       </div>
     </div>
     <div class="riga">
@@ -548,7 +191,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
       <p class="quando">Autunno</p>
       <div>
         <h3>Giornate aperte e laboratori</h3>
-        <p class="giustificato">Si guarda dentro l'essiccatoio, si compone la propria miscela, si porta a casa il sacchetto con l'etichetta scritta a mano.</p>
+        <p>Si guarda dentro l'essiccatoio, si compone la propria miscela, si porta a casa il sacchetto con l'etichetta scritta a mano.</p>
       </div>
     </div>
   </div>
@@ -556,15 +199,14 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 
 <!-- ══ ISCRIZIONE ════════════════════════════════════════ -->
 <section class="iscrizione" id="iscrizione">
-  <div class="appare">
-    <p class="occhiello">Restiamo in contatto</p>
-    <h2 class="display display--m tracciato-stacco">Ti avvisiamo noi</h2>
-    <p class="testo tracciato-stacco" style="margin-inline:auto">Le date degli eventi, l'apertura della raccolta fiori, le tisane nuove di stagione. Scriviamo poco e solo quando c'è davvero qualcosa.</p>
+  <div class="reveal">
+    <h2 class="display display--m">Ti avvisiamo <em>noi</em></h2>
+    <p class="testo stacco" style="margin-inline:auto">Le date degli eventi, l'apertura della raccolta fiori, le tisane nuove di stagione. Scriviamo poco e solo quando c'è davvero qualcosa.</p>
   </div>
 
   <!-- Per attivare il modulo: crea un form gratuito su formspree.io
        e sostituisci TUO-ID-FORMSPREE con il tuo endpoint. -->
-  <form class="modulo appare" id="modulo" action="https://formspree.io/f/TUO-ID-FORMSPREE" method="POST">
+  <form class="modulo reveal" id="modulo" action="https://formspree.io/f/TUO-ID-FORMSPREE" method="POST">
     <div class="campi">
       <div class="campo campo--largo">
         <label for="nome">Nome</label>
@@ -584,7 +226,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
       <span>Va bene se conservate i miei dati per mandarmi vostre notizie. Posso chiedervi di cancellarli quando voglio.</span>
     </label>
     <div style="text-align:center">
-      <button class="legame" type="submit" style="margin-top:0;cursor:pointer;font-family:var(--sans)">Iscrivimi</button>
+      <button class="legame legame--pieno" type="submit" style="margin-top:0;cursor:pointer;font-family:var(--sans)">Iscrivimi</button>
       <p class="esito" id="esito" role="status"></p>
     </div>
     <div class="oppure" style="text-align:center">
@@ -601,14 +243,13 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 <section class="scena" id="bottega">
   <div class="scena__sfondo"><img src="immagini/sfondo-bottega.jpg" alt="Il banco della bottega" loading="lazy"></div>
   <div class="scena__interno colonna due-colonne">
-    <div class="appare">
-      <p class="occhiello">Vieni a trovarci</p>
-      <h2 class="display display--m tracciato-stacco">La bottega<br>è aperta</h2>
-      <p class="testo tracciato-stacco giustificato">Tisane ed erbe sfuse, miele, conserve, farine, frutta e verdura del giorno, fiori in stagione. Si entra anche solo per il profumo, non ci offendiamo.</p>
+    <div class="reveal">
+      <h2 class="display display--m">La bottega<br>è <em>aperta</em></h2>
+      <p class="testo stacco">Tisane ed erbe sfuse, miele, conserve, farine, frutta e verdura del giorno, fiori in stagione. Si entra anche solo per il profumo, non ci offendiamo.</p>
 
       <dl class="orari">
-        <div><dt>Lunedì</dt><dd>15:30 - 19:00</dd></div>
-        <div><dt>Mar - Sab</dt><dd>9:00 - 12:00 / 15:30 - 19:00</dd></div>
+        <div><dt>Lunedì</dt><dd>15:30 – 19:00</dd></div>
+        <div><dt>Mar – Sab</dt><dd>9:00 – 12:00 / 15:30 – 19:00</dd></div>
         <div><dt>Domenica</dt><dd>Chiuso</dd></div>
       </dl>
 
@@ -620,7 +261,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
       <a class="legame" href="https://maps.google.com/?q=Via+Cafarette+6+Bolzano+Vicentino" target="_blank" rel="noopener">Come arrivare</a>
     </div>
 
-    <div class="collage appare">
+    <div class="collage reveal">
       <figure class="polaroid c1"><div class="ph"><img src="immagini/bottega.jpg" alt="Massimo prepara le cassette davanti al negozio" loading="lazy"></div></figure>
       <figure class="polaroid c2"><div class="ph"><img src="immagini/maria.jpg" alt="Maria in laboratorio" loading="lazy"></div></figure>
       <figure class="polaroid c3"><div class="ph"><img src="immagini/orto-peperoni.jpg" alt="Cassette di friggitelli" loading="lazy"></div></figure>
@@ -647,32 +288,6 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
   </small>
 </footer>
 
-<script>
-var ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (ridotto || !('IntersectionObserver' in window)) {
-  document.querySelectorAll('.appare').forEach(function(e){ e.classList.add('visibile'); });
-} else {
-  var osservatore = new IntersectionObserver(function(voci){
-    voci.forEach(function(v){ if (v.isIntersecting){ v.target.classList.add('visibile'); osservatore.unobserve(v.target); } });
-  }, { rootMargin: '0px 0px -12% 0px' });
-  document.querySelectorAll('.appare').forEach(function(e){ osservatore.observe(e); });
-}
-var modulo = document.getElementById('modulo');
-var esito  = document.getElementById('esito');
-modulo.addEventListener('submit', function(ev){
-  ev.preventDefault();
-  if (modulo.action.indexOf('TUO-ID-FORMSPREE') !== -1) {
-    esito.className = 'esito ko';
-    esito.textContent = 'Il modulo non è ancora collegato. Intanto scrivici su WhatsApp.';
-    return;
-  }
-  var pulsante = modulo.querySelector('button[type=submit]');
-  pulsante.disabled = true; esito.className='esito'; esito.textContent='Un attimo…';
-  fetch(modulo.action, { method:'POST', body:new FormData(modulo), headers:{'Accept':'application/json'} })
-   .then(function(r){ if(r.ok){ modulo.reset(); esito.className='esito ok'; esito.textContent='Grazie, ci siamo segnati il tuo recapito.'; } else { throw new Error(); } })
-   .catch(function(){ esito.className='esito ko'; esito.textContent='Non è partito. Riprova, oppure scrivici su WhatsApp.'; })
-   .then(function(){ pulsante.disabled=false; });
-});
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

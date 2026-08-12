@@ -1,0 +1,8 @@
+# strumenti di sviluppo / agenti — non fanno parte del sito
+.claude/
+.agents/
+.codex/
+.context/
+
+# sistema
+.DS_Store

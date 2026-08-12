@@ -7,10 +7,15 @@ Sito statico: nessuna build, nessuna dipendenza. Si apre `index.html` e funziona
 
 ## Struttura
 
-    index.html      tutta la pagina (HTML + CSS + JS in un file solo)
+    index.html      il contenuto della pagina (solo markup)
+    css/stile.css   tutto lo stile (palette, tipografia, sezioni, responsive)
+    js/main.js      comparsa allo scroll, menu mobile, parallasse, modulo
     favicon.png     icona della scheda del browser
     immagini/       tutte le foto, già ottimizzate per il web
     .nojekyll       dice a GitHub Pages di servire i file così come sono
+
+Font (da Google Fonts): **Fraunces** (titoli), **Public Sans** (testo),
+**Caveat** (scritte a mano dell'erbario).
 
 ## Pubblicare con GitHub Pages
 
