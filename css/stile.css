@@ -7,17 +7,18 @@
   /* base */
   --carta:   #F1E4C6;   /* carta ruvida, fondo caldo */
   --carta-2: #FBF3DF;   /* cornici foto, color panna */
-  --ink:     #221D12;   /* bruno scuro, testo */
-  --ink-soft:#5E5643;   /* testo secondario */
-  --linea:   rgba(34,29,18,.2);
+  --ink:     #2A2417;   /* bruno scuro, testo */
+  --ink-soft:#675D45;   /* testo secondario */
+  --linea:   rgba(42,36,23,.22);
 
-  /* pop — dai fiori */
-  --arancio: #DC3E07;   /* calendula */
-  --giallo:  #F5B301;   /* girasole */
-  --rosa:    #E6187C;   /* monarda / dalia */
-  --blu:     #2646EE;   /* fiordaliso */
-  --verde:   #097032;   /* foglia */
-  --viola:   #6A38E8;   /* lavanda */
+  /* erbario antico — colori attenuati, da stampa */
+  --arancio: #A3481E;   /* terracotta / calendula */
+  --giallo:  #C58A1E;   /* senape / girasole */
+  --rosa:    #A65A6B;   /* rosa antico / monarda */
+  --blu:     #3E617F;   /* blu polvere / fiordaliso */
+  --verde:   #55643E;   /* salvia scura / foglia */
+  --viola:   #6A5270;   /* prugna / lavanda */
+  --oro-chiaro:#E9C878; /* oro tenue per testo su blocchi scuri */
 
   /* font */
   --display:"Bevan", "Rockwell", Georgia, serif;
@@ -239,7 +240,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
   font-family:var(--display); font-weight:400;
   font-size:clamp(1.1rem,.85rem + .8vw,1.7rem); letter-spacing:0;
 }
-.voci li::after{ content:"✽"; margin-left:clamp(1.1rem,3vw,2.4rem); color:var(--giallo); font-size:.7em; vertical-align:middle; }
+.voci li::after{ content:"✽"; margin-left:clamp(1.1rem,3vw,2.4rem); color:var(--oro-chiaro); font-size:.7em; vertical-align:middle; }
 .voci li:last-child::after{ display:none; }
 
 /* ══ SCENA (foto piena) ══════════════════════════════════ */
@@ -267,16 +268,16 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .progetti a:hover .ph img{ transform:scale(1.05); }
 
 /* ══ STORIA (blocco pieno) ═══════════════════════════════ */
-.storia{ background:var(--viola); color:var(--carta); position:relative; overflow:hidden; padding-bottom:clamp(9rem,22vh,16rem); }
+.storia{ background:var(--arancio); color:var(--carta); position:relative; overflow:hidden; padding-bottom:clamp(9rem,22vh,16rem); }
 .storia__griglia{ display:grid; gap:clamp(2.5rem,6vw,5rem); grid-template-columns:1fr; position:relative; z-index:2; }
 @media (min-width:64rem){ .storia__griglia{ grid-template-columns:1.12fr .88fr; align-items:center; } }
-.storia .display em{ color:var(--giallo); }
-.storia .mano{ display:block; margin:1.75rem 0 1.5rem; color:var(--giallo); max-width:24ch; }
+.storia .display em{ color:var(--oro-chiaro); }
+.storia .mano{ display:block; margin:1.75rem 0 1.5rem; color:var(--oro-chiaro); max-width:24ch; }
 .storia .testo{ color:var(--carta); }
 .due-testi{ display:grid; gap:1.5rem 2.5rem; grid-template-columns:1fr; }
 @media (min-width:40rem){ .due-testi{ grid-template-columns:1fr 1fr; } }
 .due-testi .testo{ font-size:1rem; line-height:1.8; max-width:36ch; }
-.firma{ font-family:var(--mano); font-weight:600; font-size:3rem; line-height:1; margin-top:1.5rem; color:var(--giallo); }
+.firma{ font-family:var(--mano); font-weight:600; font-size:3rem; line-height:1; margin-top:1.5rem; color:var(--oro-chiaro); }
 .storia__foto{ position:relative; }
 .storia__foto .grande{ width:84%; margin-left:auto; transform:rotate(1.8deg); }
 .storia__foto .grande .ph{ aspect-ratio:4/5; }
@@ -387,6 +388,19 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
   transition:background-size .3s cubic-bezier(.2,.7,.3,1); }
 .social a:hover{ background-size:100% 2px; }
 .piede small{ display:block; font-size:.78rem; letter-spacing:.02em; color:rgba(251,244,230,.65); line-height:2; }
+
+/* ── illustrazioni botaniche (SVG a tratto) ─────────────── */
+.svg-sprite{ position:absolute; width:0; height:0; overflow:hidden; }
+.flip{ transform:scaleX(-1); }
+.fregio{ margin:1.6rem auto 0; color:var(--oro-chiaro); }
+.fregio svg{ display:block; margin-inline:auto; height:2rem; width:auto; }
+.divisorio{ margin:0 0 1.1rem; color:var(--arancio); }
+.iscrizione .divisorio{ margin-inline:auto; }
+.divisorio svg{ display:block; height:1.8rem; width:auto; margin-inline:auto; }
+.ornamento-bot{ display:block; height:2.7rem; width:auto; color:var(--verde); margin:0 0 1rem; }
+.piede__fregio{ display:flex; align-items:center; justify-content:center; gap:1.6rem; margin-bottom:1.4rem; }
+.piede__fregio > svg{ height:2.8rem; width:auto; color:var(--oro-chiaro); flex:none; }
+.piede__fregio .piede__sigillo{ margin:0; }
 
 /* ══ REVEAL (robusto: visibile senza JS) ═════════════════ */
 .js-anim .reveal{ opacity:0; transform:translateY(1.4rem); }
