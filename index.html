@@ -58,6 +58,35 @@
       </g>
     </g>
   </symbol>
+  <symbol id="ic-moon" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 7 A 18 18 0 1 0 30 41 A 14 18 0 0 1 30 7 Z"/>
+      <path d="M40 11 l1.2 3.2 3.2 1.2 -3.2 1.2 -1.2 3.2 -1.2 -3.2 -3.2 -1.2 3.2 -1.2 z"/>
+    </g>
+  </symbol>
+  <symbol id="ic-sun" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="24" cy="24" r="7"/>
+      <path d="M24 5 V10 M24 38 V43 M5 24 H10 M38 24 H43 M11 11 L14.5 14.5 M37 11 L33.5 14.5 M11 37 L14.5 33.5 M37 37 L33.5 33.5"/>
+    </g>
+  </symbol>
+  <symbol id="ic-star" viewBox="0 0 48 48">
+    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M24 5 C 26 20 28 22 43 24 C 28 26 26 28 24 43 C 22 28 20 26 5 24 C 20 22 22 20 24 5 Z"/>
+  </symbol>
+  <symbol id="ic-eye" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 24 Q 24 9 44 24 Q 24 39 4 24 Z"/>
+      <circle cx="24" cy="24" r="6.5"/>
+      <circle cx="24" cy="24" r="1.6" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+  <symbol id="ic-arrow" viewBox="0 0 80 56">
+    <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 12 C 28 6 54 14 66 40"/>
+      <path d="M66 40 L 52 37"/>
+      <path d="M66 40 L 60 26"/>
+    </g>
+  </symbol>
 </svg>
 
 <!-- ══ BARRA ANNUNCIO ════════════════════════════════════ -->
@@ -88,7 +117,11 @@
   <div class="hero__centro">
     <h1 class="display">Il Casale<br>delle <em>Erbe</em></h1>
     <p class="mano">erboristeria contadina</p>
-    <div class="fregio" aria-hidden="true"><svg viewBox="0 0 160 34"><use href="#ic-branch"/></svg></div>
+    <div class="fregio" aria-hidden="true">
+      <svg viewBox="0 0 48 48"><use href="#ic-moon"/></svg>
+      <svg class="grande" viewBox="0 0 48 48"><use href="#ic-sun"/></svg>
+      <svg class="flip" viewBox="0 0 48 48"><use href="#ic-moon"/></svg>
+    </div>
     <p class="hero__nota">Bolzano Vicentino · dal 2006</p>
   </div>
 
@@ -104,6 +137,7 @@
       <p class="testo">Quattro ettari di terra, biologici da vent'anni. Ci cresce quello che finisce nelle nostre tisane: calendula, malva, lavanda, iperico, melissa. E accanto, l'orto di stagione, le api e il campo dei fiori da taglio.</p>
       <p class="testo" style="margin-top:1.2em">Non è un'erboristeria che compra e rivende. Seminiamo, raccogliamo a mano nel momento giusto della giornata, essicchiamo lentamente sui telai e misceliamo una ricetta alla volta. Poi apriamo la bottega e ve la diamo in mano, raccontandovi da quale filare arriva.</p>
       <a class="legame" href="#erbario">Guarda l'erbario</a>
+      <span class="appunto">comincia da qui <svg class="freccia-inline flip" viewBox="0 0 80 56" aria-hidden="true"><use href="#ic-arrow"/></svg></span>
     </div>
 
     <div class="collage reveal">
@@ -168,6 +202,7 @@
         <p class="testo">Lavoriamo anche con chi ha bisogno di un posto dove ricominciare: è la parte di cui vado più fiera, e la facciamo sottovoce. Siamo ancora noi tre, sulla stessa terra, con lo stesso trattore vecchio.</p>
       </div>
       <p class="firma">Emanuela</p>
+      <p class="appunto">la nostra erborista <svg class="freccia-inline flip" viewBox="0 0 80 56" aria-hidden="true"><use href="#ic-arrow"/></svg></p>
       <a class="legame" href="#iscrizione">Restiamo in contatto</a>
     </div>
 
@@ -182,7 +217,7 @@
 <!-- ══ ERBARIO ═══════════════════════════════════════════ -->
 <section class="erbario" id="erbario">
   <div class="erbario__testa reveal">
-    <svg class="ornamento-bot" viewBox="0 0 48 132" aria-hidden="true"><use href="#ic-sprig"/></svg>
+    <svg class="ornamento-bot" viewBox="0 0 48 48" aria-hidden="true" style="height:2.2rem"><use href="#ic-moon"/></svg>
     <h2 class="display display--m">Quello che c'è<br>nei nostri <em>campi</em></h2>
     <p class="nota">Sei erbe, tutte coltivate e raccolte qui a Bolzano Vicentino.</p>
   </div>
@@ -194,7 +229,7 @@
     <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. V</span><div class="ph"><img src="immagini/erbario-fiordaliso.jpg" alt="Fiordalisi e ammi" loading="lazy"></div><figcaption class="dati"><strong>Fiordaliso</strong><em>Centaurea cyanus</em></figcaption></figure>
     <figure class="polaroid scheda-erba"><span class="tav" aria-hidden="true">Tav. VI</span><div class="ph"><img src="immagini/erbario-malva.jpg" alt="Fiori di malva" loading="lazy"></div><figcaption class="dati"><strong>Malva</strong><em>Malva sylvestris</em></figcaption></figure>
   </div>
-  <p class="trascina reveal">Trascina di lato →</p>
+  <p class="trascina reveal">Trascina di lato <svg class="freccia-inline" viewBox="0 0 80 56" aria-hidden="true"><use href="#ic-arrow"/></svg></p>
 </section>
 
 <!-- ══ ALMANACCO ═════════════════════════════════════════ -->
@@ -243,7 +278,11 @@
 <!-- ══ ISCRIZIONE ════════════════════════════════════════ -->
 <section class="iscrizione" id="iscrizione">
   <div class="reveal">
-    <div class="divisorio" aria-hidden="true"><svg viewBox="0 0 160 34"><use href="#ic-branch"/></svg></div>
+    <div class="divisorio" aria-hidden="true">
+      <svg viewBox="0 0 48 48"><use href="#ic-star"/></svg>
+      <svg class="grande" viewBox="0 0 48 48"><use href="#ic-eye"/></svg>
+      <svg viewBox="0 0 48 48"><use href="#ic-star"/></svg>
+    </div>
     <h2 class="display display--m">Ti avvisiamo <em>noi</em></h2>
     <p class="testo stacco" style="margin-inline:auto">Le date degli eventi, l'apertura della raccolta fiori, le tisane nuove di stagione. Scriviamo poco e solo quando c'è davvero qualcosa.</p>
   </div>
@@ -321,9 +360,9 @@
 <!-- ══ PIEDE ═════════════════════════════════════════════ -->
 <footer class="piede">
   <div class="piede__fregio">
-    <svg viewBox="0 0 48 132" aria-hidden="true"><use href="#ic-sprig"/></svg>
+    <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#ic-moon"/></svg>
     <div class="piede__sigillo"><img src="immagini/marchio-crema.png" alt="Il Casale delle Erbe · Vicenza"></div>
-    <svg class="flip" viewBox="0 0 48 132" aria-hidden="true"><use href="#ic-sprig"/></svg>
+    <svg class="flip" viewBox="0 0 48 48" aria-hidden="true"><use href="#ic-moon"/></svg>
   </div>
   <ul class="social">
     <li><a href="https://www.instagram.com/il_casale_delle_erbe?igsh=MWRzN3Jrdnd3cTEyMQ==" target="_blank" rel="noopener">Instagram</a></li>
