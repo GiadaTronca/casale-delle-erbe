@@ -182,8 +182,8 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .hero .mano{ color:#fff; }
 .hero__nota{ margin-top:1.2rem; font-family:var(--sans); font-weight:700; font-size:.84rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.82); }
 .hero__giu{
-  position:absolute; bottom:clamp(1.75rem,4vh,2.75rem); left:50%; transform:translateX(-50%);
-  z-index:2; text-decoration:none;
+  position:absolute; bottom:clamp(1.75rem,4vh,2.75rem); left:0; right:0;
+  z-index:2; text-decoration:none; text-align:center; text-indent:.24em;
   font-weight:700; font-size:.74rem; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.75);
 }
 .hero__giu::after{ content:""; display:block; width:2px; height:2.2rem; margin:.7rem auto 0; background:linear-gradient(var(--peach),transparent); }
@@ -208,22 +208,23 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .collage__fiore{ text-align:center; padding:.5rem 0; align-self:center; }
 .collage__fiore img{ width:min(100%,11rem); margin:0 auto .5rem; height:auto; filter:drop-shadow(0 14px 24px rgba(46,34,51,.3)); }
 .collage__fiore span{ display:block; font-family:var(--mano); font-weight:600; font-size:1.6rem; line-height:1.1; color:var(--berry); }
+#bottega .collage__fiore img{ width:min(100%,12.5rem); background:#fff; border-radius:14px; padding:.45rem; box-shadow:0 12px 26px rgba(46,34,51,.3); }
 
 .verticale{
-  position:absolute; top:0; bottom:0; left:-.5rem; z-index:3;
+  position:absolute; top:0; bottom:0; left:-1.4rem; z-index:3;
   writing-mode:vertical-rl; transform:rotate(180deg);
-  font-family:var(--mano); font-weight:600; font-size:1.6rem; color:var(--juniper);
+  font-family:var(--mano); font-weight:600; font-size:1.5rem; color:var(--ink);
   display:flex; align-items:center; pointer-events:none;
 }
 
-/* ══ STRISCIA (blocco scuro) ═════════════════════════════ */
-.striscia{ background:var(--millstone); color:var(--cream); }
-.striscia__interno{ display:grid; gap:clamp(1.25rem,4vw,2.5rem); grid-template-columns:1fr; align-items:center; }
-@media (min-width:56rem){ .striscia__interno{ grid-template-columns:11rem 1fr; } }
-.striscia .occhiello{ color:rgba(233,216,192,.85); }
-.voci{ display:flex; flex-wrap:wrap; gap:clamp(1.1rem,3vw,2.4rem); list-style:none; margin:0; padding:0; }
-.voci li{ font-family:var(--display); font-weight:400; font-size:clamp(1.1rem,.85rem + .8vw,1.7rem); letter-spacing:0; }
-.voci li::after{ content:"✦"; margin-left:clamp(1.1rem,3vw,2.4rem); color:var(--poppy); font-size:.7em; vertical-align:middle; }
+/* ══ STRISCIA (offerte: una riga sola, centrata) ═════════ */
+.striscia{ background:transparent; color:var(--ink); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding-block:clamp(1.5rem,4vh,2.4rem); }
+.striscia__interno{ display:block; text-align:center; }
+.striscia .occhiello{ display:block; color:var(--ink-soft); margin-bottom:1rem; }
+.voci{ display:flex; flex-wrap:nowrap; justify-content:center; align-items:center; list-style:none; margin:0; padding:0; overflow-x:auto; scrollbar-width:none; }
+.voci::-webkit-scrollbar{ display:none; }
+.voci li{ font-family:var(--display); font-weight:400; font-size:clamp(.95rem,.6rem + .9vw,1.5rem); letter-spacing:0; white-space:nowrap; }
+.voci li::after{ content:"✦"; margin:0 clamp(.65rem,2vw,1.5rem); color:var(--juniper); font-size:.6em; vertical-align:middle; }
 .voci li:last-child::after{ display:none; }
 
 /* ══ SCENA (foto piena) ══════════════════════════════════ */
@@ -250,9 +251,10 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .storia .display em{ color:var(--rose); }
 .storia .mano{ display:block; margin:1.75rem 0 1.5rem; color:var(--rose); max-width:24ch; }
 .storia .testo{ color:var(--cream); }
-.due-testi{ display:grid; gap:1.5rem 2.5rem; grid-template-columns:1fr; }
-@media (min-width:40rem){ .due-testi{ grid-template-columns:1fr 1fr; } }
-.due-testi .testo{ font-size:1rem; line-height:1.8; max-width:36ch; }
+.storia .legame{ border-color:var(--cream); color:var(--cream); }
+.storia .legame:hover{ background:var(--cream); color:var(--plum); border-color:var(--cream); }
+.due-testi{ display:grid; gap:1.4rem; grid-template-columns:1fr; }
+.due-testi .testo{ font-size:1.02rem; line-height:1.8; max-width:64ch; }
 .firma{ font-family:var(--mano); font-weight:600; font-size:3rem; line-height:1; margin-top:1.5rem; color:var(--rose); }
 .storia__foto{ position:relative; }
 .storia__foto .grande{ width:84%; margin-left:auto; transform:rotate(1.8deg); }
@@ -289,6 +291,10 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 
 /* ══ ALMANACCO ═══════════════════════════════════════════ */
 .almanacco{ margin-top:clamp(2.75rem,6vh,4rem); border-top:2px solid var(--lilac); }
+.alman-testa{ display:flex; align-items:center; justify-content:space-between; gap:clamp(1.5rem,4vw,3rem); max-width:100%; }
+.alman-testa > div{ flex:1 1 auto; }
+.alman-ill{ flex:none; margin:0; height:7rem; }
+@media (max-width:56rem){ .alman-testa{ flex-direction:column; } .alman-ill{ order:-1; margin-inline:auto; } }
 .riga{ display:grid; grid-template-columns:1fr; gap:.5rem 2rem; padding:clamp(1.6rem,3.5vw,2.4rem) 0; border-bottom:1px solid var(--line); align-items:baseline; }
 @media (min-width:44rem){ .riga{ grid-template-columns:4.5rem 12rem 1fr; } }
 .riga .num{ font-family:var(--mano); font-weight:700; font-size:2.6rem; line-height:1; }
@@ -341,8 +347,8 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .recapiti a:hover{ border-bottom-color:var(--peach); }
 
 /* ══ PIEDE ═══════════════════════════════════════════════ */
-.piede{ background:var(--ink); color:var(--cream); padding:clamp(3.5rem,9vh,5rem) var(--margine) clamp(2.25rem,5vh,3rem); text-align:center; }
-.piede__sigillo{ width:clamp(5rem,12vw,6.5rem); margin:0 auto; }
+.piede{ background:var(--millstone); color:var(--cream); padding:clamp(3.5rem,9vh,5rem) var(--margine) clamp(2.25rem,5vh,3rem); text-align:center; }
+.piede__sigillo{ width:clamp(5rem,12vw,6.5rem); margin:0 auto 1.6rem; }
 .piede__sigillo img{ width:100%; height:auto; filter:brightness(0) invert(1); opacity:.92; }
 .social{ display:flex; justify-content:center; flex-wrap:wrap; gap:1.5rem 2.75rem; list-style:none; margin:0 0 2rem; padding:0; }
 .social a{ text-decoration:none; font-weight:700; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--cream);
@@ -376,7 +382,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 /* illustrazioni-immagine (fornite dall'utente) */
 .ill{ display:block; width:auto; height:auto; pointer-events:none; }
 .ill--mul{ mix-blend-mode:multiply; }
-.fregio img{ height:2.4rem; width:auto; }
+.fregio img{ height:4.6rem; width:auto; }
 .divisorio img{ display:block; margin:0 auto; height:7rem; width:auto; }
 .ornamento-ill{ display:block; height:6.8rem; width:auto; margin:0 0 1rem; mix-blend-mode:multiply; }
 .piede__fregio img{ height:2.7rem; width:auto; }
@@ -436,7 +442,8 @@ body::after{  /* grana fine */
   .menu .chiudi-menu{ display:block; position:absolute; top:1.6rem; right:var(--margine); background:none; border:0; color:var(--ink); font-size:2.2rem; line-height:1; cursor:pointer; }
 }
 @media (max-width:48rem){
-  section{ padding:clamp(3.5rem,8vh,5rem) var(--margine); }
+  section{ padding:clamp(3.5rem,8vh,5rem) var(--margine); text-align:center; }
+  .modulo{ text-align:left; }
   .testata{ top:1.1rem; }
   .intestazione{ max-width:100%; }
   .testo, .nota{ max-width:100%; }
