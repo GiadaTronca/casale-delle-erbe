@@ -20,8 +20,8 @@
   --peach:     #E18079;
   --poppy:     #D65341;
   --copper:    #88241E;
-  --juniper:   #6E7A34;
-  --sage:      #3F5A43;   /* salvia scura, sicura come testo */
+  --juniper:   #817F3E;
+  --sage:      #3F5A43;   /* salvia scura, sicura come testo piccolo */
   --sagewood:  #507555;
   --millstone: #444D4C;
 
@@ -84,7 +84,7 @@ p:last-child{ margin-bottom:0; }
 .nota{
   margin-top:1.15rem; max-width:46ch;
   font-family:var(--mano); font-weight:600;
-  font-size:1.5rem; line-height:1.4; color:var(--sage);
+  font-size:1.5rem; line-height:1.4; color:var(--sagewood);
 }
 
 .legame{
@@ -193,7 +193,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .due-colonne{ display:grid; gap:clamp(2.5rem,6vw,5.5rem); grid-template-columns:1fr; }
 @media (min-width:64rem){ .due-colonne{ grid-template-columns:.9fr 1.1fr; align-items:center; } }
 .manifesto .mano{ display:block; margin:1.5rem 0; max-width:22ch; color:var(--raspberry); }
-.manifesto .display em{ color:var(--copper); }
+.manifesto .display em{ color:var(--raspberry); }
 
 .collage{ display:grid; grid-template-columns:repeat(6,1fr); gap:clamp(.9rem,2vw,1.6rem); align-items:start; position:relative; }
 .collage .c1{ grid-column:1/4; margin-top:clamp(1.5rem,5vw,3.5rem); transform:rotate(-3.5deg); }
@@ -212,7 +212,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .verticale{
   position:absolute; top:0; bottom:0; left:-.5rem; z-index:3;
   writing-mode:vertical-rl; transform:rotate(180deg);
-  font-family:var(--mano); font-weight:600; font-size:1.6rem; color:var(--sage);
+  font-family:var(--mano); font-weight:600; font-size:1.6rem; color:var(--juniper);
   display:flex; align-items:center; pointer-events:none;
 }
 
@@ -223,7 +223,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .striscia .occhiello{ color:rgba(233,216,192,.85); }
 .voci{ display:flex; flex-wrap:wrap; gap:clamp(1.1rem,3vw,2.4rem); list-style:none; margin:0; padding:0; }
 .voci li{ font-family:var(--display); font-weight:400; font-size:clamp(1.1rem,.85rem + .8vw,1.7rem); letter-spacing:0; }
-.voci li::after{ content:"✦"; margin-left:clamp(1.1rem,3vw,2.4rem); color:var(--peach); font-size:.7em; vertical-align:middle; }
+.voci li::after{ content:"✦"; margin-left:clamp(1.1rem,3vw,2.4rem); color:var(--poppy); font-size:.7em; vertical-align:middle; }
 .voci li:last-child::after{ display:none; }
 
 /* ══ SCENA (foto piena) ══════════════════════════════════ */
@@ -232,7 +232,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .scena__sfondo::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(30,18,32,.78),rgba(30,18,32,.45) 50%,rgba(30,18,32,.85)); }
 .scena__interno{ position:relative; z-index:2; }
 .scena .display{ color:var(--cream); }
-.scena .display em{ color:var(--peach); }
+.scena .display em{ color:var(--poppy); }
 .scena .nota{ color:var(--peach); }
 .scena .testo{ color:rgba(255,255,255,.9); }
 .scena .occhiello{ color:rgba(255,255,255,.8); }
@@ -244,7 +244,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .progetti a:hover .ph img{ transform:scale(1.05); }
 
 /* ══ STORIA (blocco lampone) ═════════════════════════════ */
-.storia{ background:var(--raspberry); color:var(--cream); position:relative; overflow:hidden; padding-bottom:clamp(9rem,22vh,16rem); }
+.storia{ background:var(--plum); color:var(--cream); position:relative; overflow:hidden; padding-bottom:clamp(9rem,22vh,16rem); }
 .storia__griglia{ display:grid; gap:clamp(2.5rem,6vw,5rem); grid-template-columns:1fr; position:relative; z-index:2; }
 @media (min-width:64rem){ .storia__griglia{ grid-template-columns:1.12fr .88fr; align-items:center; } }
 .storia .display em{ color:var(--rose); }
@@ -270,7 +270,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 /* ══ ERBARIO ═════════════════════════════════════════════ */
 .erbario{ padding-inline:0; }
 .erbario__testa{ padding-inline:var(--margine); max-width:var(--colonna); margin-inline:auto; }
-.erbario .display em{ color:var(--raspberry); }
+.erbario .display em{ color:var(--sagewood); }
 .pista{
   display:flex; gap:clamp(1.25rem,2.5vw,2rem); align-items:flex-start;
   margin-top:clamp(2.75rem,6vh,4rem); padding:.5rem var(--margine) 1.5rem;
@@ -288,18 +288,18 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .trascina{ text-align:center; margin-top:.5rem; font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); }
 
 /* ══ ALMANACCO ═══════════════════════════════════════════ */
-.almanacco{ margin-top:clamp(2.75rem,6vh,4rem); border-top:2px solid var(--ink); }
+.almanacco{ margin-top:clamp(2.75rem,6vh,4rem); border-top:2px solid var(--lilac); }
 .riga{ display:grid; grid-template-columns:1fr; gap:.5rem 2rem; padding:clamp(1.6rem,3.5vw,2.4rem) 0; border-bottom:1px solid var(--line); align-items:baseline; }
 @media (min-width:44rem){ .riga{ grid-template-columns:4.5rem 12rem 1fr; } }
 .riga .num{ font-family:var(--mano); font-weight:700; font-size:2.6rem; line-height:1; }
 .riga:nth-child(1) .num{ color:var(--copper); }
-.riga:nth-child(2) .num{ color:var(--plum); }
-.riga:nth-child(3) .num{ color:var(--raspberry); }
-.riga:nth-child(4) .num{ color:var(--sage); }
+.riga:nth-child(2) .num{ color:var(--raspberry); }
+.riga:nth-child(3) .num{ color:var(--berry); }
+.riga:nth-child(4) .num{ color:var(--plum); }
 .riga .quando{ font-weight:700; font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); }
 .riga h3{ font-family:var(--display); font-weight:400; margin:0 0 .5rem; font-size:clamp(1.25rem,1.05rem + .6vw,1.65rem); letter-spacing:0; text-wrap:balance; }
 .riga p{ font-size:1rem; line-height:1.75; color:var(--ink-soft); max-width:60ch; }
-.almanacco .intestazione .display em, .colonna .display em{ color:var(--berry); }
+#eventi .display em{ color:var(--berry); }
 
 /* ══ ISCRIZIONE ══════════════════════════════════════════ */
 .iscrizione{ text-align:center; }
@@ -317,7 +317,7 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .campo input::placeholder{ color:rgba(46,34,51,.4); }
 .campo input:focus{ outline:none; border-color:var(--copper); }
 .consenso{ display:flex; gap:.8rem; align-items:flex-start; margin:1.9rem 0 1.6rem; font-size:.9rem; line-height:1.65; color:var(--ink-soft); text-align:left; }
-.consenso input{ margin-top:.35rem; accent-color:var(--copper); flex:none; width:1.15rem; height:1.15rem; }
+.consenso input{ margin-top:.35rem; accent-color:var(--poppy); flex:none; width:1.15rem; height:1.15rem; }
 .esito{ margin-top:1rem; font-size:.95rem; min-height:1.4em; text-align:center; font-weight:600; }
 .esito.ok{ color:var(--sage); }
 .esito.ko{ color:var(--copper); }
@@ -373,6 +373,14 @@ section{ padding:clamp(4.5rem,11vh,9rem) var(--margine); }
 .storia .appunto{ color:var(--rose); }
 .freccia-inline{ height:1.5rem; width:auto; vertical-align:middle; margin-left:.35rem; }
 
+/* illustrazioni-immagine (fornite dall'utente) */
+.ill{ display:block; width:auto; height:auto; pointer-events:none; }
+.ill--mul{ mix-blend-mode:multiply; }
+.fregio img{ height:2.4rem; width:auto; }
+.divisorio img{ display:block; margin:0 auto; height:7rem; width:auto; }
+.ornamento-ill{ display:block; height:6.8rem; width:auto; margin:0 0 1rem; mix-blend-mode:multiply; }
+.piede__fregio img{ height:2.7rem; width:auto; }
+
 /* ══ TEXTURE DI CARTA (pergamena, come un libro antico) ══ */
 body::before{  /* macchie/nuvole di pergamena */
   content:""; position:fixed; inset:0; z-index:200; pointer-events:none;
@@ -419,13 +427,13 @@ body::after{  /* grana fine */
   .menu{
     position:fixed; top:0; right:0; bottom:0; left:0; width:100%; height:100%; z-index:50;
     flex-direction:column; justify-content:center; align-items:center; gap:2rem;
-    background:var(--plum);
+    background:var(--lilac);
     transform:translateX(100%); transition:transform .4s cubic-bezier(.4,0,.2,1);
   }
   .menu.aperto{ transform:none; }
-  .menu a{ font-size:1.15rem; letter-spacing:.14em; color:#fff; }
+  .menu a{ font-size:1.15rem; letter-spacing:.14em; color:var(--ink); }
   .apri-menu{ display:block; }
-  .menu .chiudi-menu{ display:block; position:absolute; top:1.6rem; right:var(--margine); background:none; border:0; color:#fff; font-size:2.2rem; line-height:1; cursor:pointer; }
+  .menu .chiudi-menu{ display:block; position:absolute; top:1.6rem; right:var(--margine); background:none; border:0; color:var(--ink); font-size:2.2rem; line-height:1; cursor:pointer; }
 }
 @media (max-width:48rem){
   section{ padding:clamp(3.5rem,8vh,5rem) var(--margine); }
